@@ -1,0 +1,62 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.cache
+
+# Django stuff:
+*.log
+local_settings.py
+settings/local.py
+logs
+
+# dotenv
+.env
+
+# db
+*sqlite3.db
+
+# static root
+public/
+http_static/
+
+# virtualenv
+env
+pyenv
+venv
+.venv
+
+# other
+*.DS_Store
+secure.py
+production.py
+*-old.json
+*.srt

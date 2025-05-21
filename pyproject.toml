@@ -1,0 +1,50 @@
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shred"
+authors = [
+    {name="nmaekawa", email="nmaekawa@g.harvard.edu"},
+]
+description = "dump all snippets in lxp import into files"
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = [
+    "vpal",
+    "lxp"
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "click",
+    "html2text",
+]
+dynamic = ["version"]
+
+[project.scripts]
+shred = "shred.cli:cli"
+
+[tool.setuptools.dynamic]
+version = {attr = "shred.__version__"}
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+target-version = ["py312"]
+exclude = '''
+/(
+        \.eggs
+      | \.git
+      | \.tox
+      | \.venv
+      | build
+      | dist
+)/
+'''
